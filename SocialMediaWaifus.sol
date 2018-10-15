@@ -1,8 +1,8 @@
 pragma solidity ^0.4.24;
 
-import "./libs/ERC721/ERC721.sol";
+import "./WaifuDistribution.sol";
 
-contract SocialMediaWaifus is ERC721{
+contract SocialMediaWaifus is WaifuDistribution{
 
 	modifier isWaifuOwner(_tokenId){
 		address owner = ownerOf(_tokenId);
@@ -25,7 +25,19 @@ contract SocialMediaWaifus is ERC721{
 	/// @param _profile Used for _getSocialProfileId
 	function getWaifusInProfile(string _network, string _profile) external view returns (uint[]){
 		uint profileId=_getSocialProfileId(_network, _profile);
-		//TODO
+		uint length=0;
+		for(uint i=0; i<_ownedWaifus; i++){
+			if(_tokenToMedia[i]==profileId){
+				length++;
+			}
+		}
+		uint[] waifus=new uint[](length);
+		for(uint i=0; i<_ownedWaifus; i++){
+			if(_tokenToMedia[i]==profileId){
+				waifus.push(i);
+			}
+		}
+		return waifus;
 	}
 
 	function setWaifuProfile(uint _tokenId, string _network, string _profile) external isWaifuOwner(_tokenId){

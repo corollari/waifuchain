@@ -16,7 +16,7 @@ contract SocialMediaWaifus is WaifuDistribution{
 	/// @dev Generate a unique id associated to a social media profile
 	/// @param _network Social media platform where the profile is located (eg: "facebook.com", "twitter.com"...)
 	/// @param _profile Profile/user handle on the social media platform (eg: "@corollari", "@messi"...)
-	function _getSocialProfileId(string _network, string _profile) private view returns (uint){
+	function _getSocialProfileId(string _network, string _profile) private pure returns (uint){
 		return keccak256(_network, _profile);
 	}
 

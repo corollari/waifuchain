@@ -1,2 +1,2 @@
-# cryptowaifus-contract
-Ethereum smart contract for cryptowaifus
+# WaifuChain
+Ethereum smart contract for WaifuChain

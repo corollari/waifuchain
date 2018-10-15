@@ -2,6 +2,6 @@ pragma solidity ^0.4.24;
 
 import "./SocialMediaWaifus.sol";
 
-contract CryptoWaifus is SocialMediaWaifus{
+contract WaifuChain is SocialMediaWaifus{
 
 }

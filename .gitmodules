@@ -1,3 +1,3 @@
-[submodule "libs/openzeppelin-solidity"]
-	path = libs/openzeppelin-solidity
+[submodule "contract/libs/openzeppelin-solidity"]
+	path = contract/libs/openzeppelin-solidity
 	url = https://github.com/OpenZeppelin/openzeppelin-solidity

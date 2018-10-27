@@ -52,7 +52,7 @@ php -S localhost:8000
 ```
 
 ### Build and deploy contract
-We are currently using (https://remix.ethereum.org/)[Remix].
+We are currently using [Remix](https://remix.ethereum.org/).
 
 ## Why
 > Your scientists were so preoccupied with whether or not they could, they didn't start to think if they should.

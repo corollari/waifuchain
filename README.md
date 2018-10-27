@@ -23,11 +23,36 @@
 The extension can be installed through [Chrome's Web Store](https://chrome.google.com/webstore/detail/waspline-reader/ndlnnojbbcbdpkccfmcgbopalpbmhbhm) or [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/waspline-reader/)
 
 ## Build
+
+### Clone repository
 ```bash
+git clone --recursive https://github.com/corollari/waifuchain.git
+```
+
+### Build browser extension
+```bash
+cd webextension
 npm install
-#npm run updateWeb3
+# Run the following command to update the version of Web3.js being used. Given that non-backwards compatible releases are common for Web3.js, this may break the extension.
+# npm run updateWeb3
 npm run build
 ```
+
+### Collect/scrap waifu data
+```bash
+cd scrapper
+pip install -r requirements.txt
+python spider.py
+```
+
+### Run server (main website & API)
+```bash
+cd server
+php -S localhost:8000
+```
+
+### Build and deploy contract
+We are currently using (https://remix.ethereum.org/)[Remix].
 
 ## Credits
 The following external resources have been included as part of the project:

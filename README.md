@@ -12,8 +12,8 @@
 <p align="center">
   <a href="#install">Install</a> •
   <a href="#build">Build</a> •
-  <a href="#credits">Credits</a> •
   <a href="#why">Why?</a> •
+  <a href="#credits">Credits</a> •
   <a href="#license">License</a>
 </p>
 
@@ -54,14 +54,14 @@ php -S localhost:8000
 ### Build and deploy contract
 We are currently using (https://remix.ethereum.org/)[Remix].
 
+## Why
+> Your scientists were so preoccupied with whether or not they could, they didn't start to think if they should.
+<p align="right">- Dr. Malcolm</p>
+
 ## Credits
 The following external resources have been included as part of the project:
 - Ethereum Foundation's Web3.js 
 - The [wasp icon](https://icons8.com/icon/6558/wasp) used in the extension comes from Icons8's Free License icon collection
-
-## Why
-> Your scientists were so preoccupied with whether or not they could, they didn't start to think if they should.
-<p align="right">- Dr. Malcolm</p>
 
 ## License
 The Unlicense

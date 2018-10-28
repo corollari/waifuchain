@@ -42,7 +42,7 @@ npm run build
 ```bash
 cd scrapper
 pip install -r requirements.txt
-python spider.py
+python scrapper.py
 ```
 
 ### Run server (main website & API)

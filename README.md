@@ -17,7 +17,7 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot](https://raw.githubusercontent.com/corollari/waifuchain/master/webextension/promo/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/corollari/waifuchain/master/.github/screenshot.png)
 
 ## Install
 The extension can be installed through [Chrome's Web Store](https://chrome.google.com/webstore/detail/waspline-reader/ndlnnojbbcbdpkccfmcgbopalpbmhbhm) or [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/waspline-reader/)

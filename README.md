@@ -61,7 +61,7 @@ We are currently using [Remix](https://remix.ethereum.org/).
 ## Credits
 The following external resources have been included as part of the project:
 - Ethereum Foundation's Web3.js 
-- The [wasp icon](https://icons8.com/icon/6558/wasp) used in the extension comes from Icons8's Free License icon collection
+- The icon used in the extension is an image of Zero Two, one of the main characters of the series DARLING in the FRANXX.
 
 ## License
 The Unlicense

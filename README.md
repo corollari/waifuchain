@@ -32,10 +32,9 @@ git clone --recursive https://github.com/corollari/waifuchain.git
 ### Build browser extension
 ```bash
 cd webextension
-npm install
-# Run the following command to update the version of Web3.js being used. Given that non-backwards compatible releases are common for Web3.js, this may break the extension.
-# npm run updateWeb3
-npm run build
+npm install -g browserify #Install browserify
+npm install #Install dependencies
+npm run build #Build extension
 ```
 
 ### Collect/scrap waifu data
@@ -45,10 +44,19 @@ pip install -r requirements.txt
 python scrapper.py
 ```
 
+### Set up the database
+```bash
+#An SQL database must have be installed
+cd scrapper
+pip install -r requirements.txt
+python waifuselect.py
+python createdb.py
+```
+
 ### Run server (main website & API)
 ```bash
 cd server
-php -S localhost:8000
+php -S localhost:8000 #The database must have been set up (see previous section) in order for the server to work properly
 ```
 
 ### Build and deploy contract

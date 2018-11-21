@@ -1,39 +1,34 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-const {WaifuChain, web3} = require("../../web3/WaifuChain.js");
+const {WaifuChain, web3} = require("../../webextension/extension/web3/WaifuChain.js");
 
-if(document.querySelector(".ProfileHeaderCard")){
-	let currentPage=new URL(window.location.href)
-	WaifuChain.methods.getWaifusInProfile(currentPage.hostname, currentPage.pathname).call()
-	.then((waifus)=>{
-		if(waifus.length){
-			document.querySelector(".ProfileHeaderCard-bio").innerHTML+=
-				'<br><div id="waifuList"></div>';
-		}
-		let waifuList=document.querySelector("#waifuList");
-		waifus.forEach((waifuId, waifuIndex)=>{
-			WaifuChain.methods.tokenURI(waifuId).call()
-			.then((waifuURL)=>
-				fetch(waifuURL)
-			)
-			.then((res)=>
-				res.json()
-			)
-			.then((waifu)=>{
-				document.querySelector("#waifu-"+waifuIndex+" > img").src=waifu["image"];
-				document.querySelector("#waifu-"+waifuIndex+" > p").innerText=waifu["name"].split(' ').slice(0,3).join(' ');
-			});
-			waifuList.innerHTML+=
-				"<div id='waifu-"+waifuIndex+"' class='waifuCard'>"+
-					"<img width='85' height='90'>"+
-					"<p></p>"+
-				"</div>";
-		});
-	});
-}
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2019 15:37:25").getTime();
 
+// Update the count down every 1 second
+var x = setInterval(function() {
 
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    document.getElementById("cuenta").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("cuenta").innerHTML = "AWARDED!";
+    }
+}, 1000);
 
-},{"../../web3/WaifuChain.js":3}],2:[function(require,module,exports){
+},{"../../webextension/extension/web3/WaifuChain.js":3}],2:[function(require,module,exports){
 module.exports.contractAddress="0xc1769937adb8e0a8338690acd0325d6fdd87a0a0"
 
 module.exports.ABI=[
@@ -2620,7 +2615,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
 
 /** Used as a reference to the global object. */
-var root = freeGlobal || freeSelf || this;
+var root = freeGlobal || freeSelf || Function('return this')();
 
 /** Built-in value references. */
 var Symbol$1 = root.Symbol;
@@ -30139,7 +30134,7 @@ module.exports = MD5
 },{"hash-base":114,"inherits":130,"safe-buffer":191}],141:[function(require,module,exports){
 module.exports={
   "CHROME_ID": "nkbihfbeogaeaoehlefnkodbefgpgknn",
-  "FIREFOX_ID":"webextension@metamask.io"
+  "FIREFOX_ID":"4f8e3007-2c57-944b-a11b-b518d57714fa"
 }
 
 },{}],142:[function(require,module,exports){
@@ -43263,7 +43258,7 @@ var givenProvider = null;
 
 // ADD GIVEN PROVIDER
 /* jshint ignore:start */
-var global = this;
+var global = Function('return this')();
 
 // EthereumProvider
 if(typeof global.ethereumProvider !== 'undefined') {

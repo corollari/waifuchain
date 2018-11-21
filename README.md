@@ -47,7 +47,7 @@ python scrapper.py
 
 ### Set up the database
 ```bash
-#An SQL database must have be installed
+#An SQL database must be installed
 cd scrapper
 pip install -r requirements.txt
 python waifuselect.py

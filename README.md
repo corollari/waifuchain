@@ -43,6 +43,7 @@ npm run build #Build extension
 cd scrapper
 pip install -r requirements.txt
 python scrapper.py
+python normalize.py
 ```
 
 ### Set up the database

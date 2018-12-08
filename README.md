@@ -1,4 +1,6 @@
 
+**All developement has been moved to [@thewaifuproject](https://github.com/thewaifuproject)**
+
 <h1 align="center">
   <br>
   <img src="https://raw.githubusercontent.com/corollari/waifuchain/master/webextension/promo/icon.png" width="200"></a>

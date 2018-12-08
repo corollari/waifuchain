@@ -1,5 +1,5 @@
 
-**All developement has been moved to [@thewaifuproject](https://github.com/thewaifuproject)**
+<h3 align="center">All development has been moved to <a href="https://github.com/thewaifuproject">@thewaifuproject</a></h3>
 
 <h1 align="center">
   <br>
